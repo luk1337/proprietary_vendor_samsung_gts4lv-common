@@ -8373,41 +8373,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libOmxVpp",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libOmxVpp.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libbinder",
-                "libcutils",
-                "libOmxCore",
-                "libvppclient",
-                "vendor.qti.hardware.vpp@1.1",
-                "vendor.qti.hardware.capabilityconfigstore@1.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libOpenCv.camera.samsung",
     owner: "samsung",
     strip: {

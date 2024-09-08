@@ -306,7 +306,6 @@ PRODUCT_PACKAGES += \
     com.samsung.chi.override \
     sound_trigger.primary.sdm710 \
     libFileMux_proprietary \
-    libOmxVpp \
     libOpenCv.camera.samsung \
     lib_SamsungRec_07010 \
     lib_SoundAlive_SRC384_ver320 \
