@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
+    vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/wifi_qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_qcom.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/wifi_sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_sec.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
@@ -60,7 +61,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
-    vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/sensors/config/ak991x_dri_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/ak991x_dri_0.json \
@@ -245,7 +245,6 @@ PRODUCT_PACKAGES += \
     libvppclient \
     libvpphvx \
     libvpplibrary \
-    libwfdhdcpcp \
     sensors.grip \
     sensors.ssc \
     libasphere \
@@ -350,6 +349,7 @@ PRODUCT_PACKAGES += \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \
     libwfddisplayconfig_proprietary \
+    libwfdhdcpcp \
     libwfdhdcpservice_proprietary \
     libwfdmminterface_proprietary \
     libwfdmmservice_proprietary \
@@ -496,7 +496,7 @@ PRODUCT_PACKAGES += \
     time_daemon \
     vendor.qti.qspmhal@1.0-service \
     vppservice \
-    wfdhdcphalservice \
+    wfdvndservice \
     wifidisplayhalservice \
     xtra-daemon \
     wfdservice

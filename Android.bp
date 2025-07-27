@@ -6114,49 +6114,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwfdhdcpcp",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libwfdhdcpcp.so",
-            ],
-            shared_libs: [
-                "libmmosal_vendor",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwfdhdcpcp.so",
-            ],
-            shared_libs: [
-                "libmmosal_vendor",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "sensors.grip",
     owner: "samsung",
     strip: {
@@ -9578,6 +9535,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwfdhdcpcp",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libwfdhdcpcp.so",
+            ],
+            shared_libs: [
+                "libmmosal_vendor",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdhdcpservice_proprietary",
     owner: "samsung",
     strip: {
@@ -10196,6 +10181,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
                 "libwfdsessionmodule",
                 "liblog",
+                "libwfdcommonutils_proprietary",
                 "libc++",
                 "libc",
                 "libm",
@@ -13594,34 +13580,20 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "wfdhdcphalservice",
+    name: "wfdvndservice",
     owner: "samsung",
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/bin/wfdhdcphalservice",
+                "proprietary/vendor/bin/wfdvndservice",
             ],
             shared_libs: [
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libc++",
-                "libhidlbase",
-                "libbinder",
-                "libbase",
-                "liblog",
                 "libutils",
-                "libcutils",
-                "libwfdhdcpcp",
+                "liblog",
+                "libbinder",
                 "libwfdhdcpservice_proprietary",
-                "libwfdcommonutils_proprietary",
-                "libwfdutils_proprietary",
-                "libqdMetaData",
                 "libavservices_minijail",
-                "libwfddisplayconfig_proprietary",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
