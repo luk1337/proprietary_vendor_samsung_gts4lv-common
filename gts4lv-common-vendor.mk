@@ -411,18 +411,18 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.bluetooth@2.0 \
     vendor.samsung.hardware.hyper-V2-ndk_platform \
     vendor.samsung.hardware.thermal@1.0 \
-    libVC1Dec \
-    libVC1DecDsp_skel \
-    libapps_mem_heap \
-    libcamera_nn_skel \
-    libdspCV_skel \
-    libfastcvadsp \
-    libfastcvdsp_skel \
-    libscveObjectSegmentation_skel \
-    libscveT2T_skel \
-    libsnpe_dsp_v65_domains_v2_skel \
-    libsns_device_mode_skel \
-    libsns_low_lat_stream_skel \
+    vendor_lib_rfsa_adsp_libVC1Dec_so \
+    vendor_lib_rfsa_adsp_libVC1DecDsp_skel_so \
+    vendor_lib_rfsa_adsp_libapps_mem_heap_so \
+    vendor_lib_rfsa_adsp_libcamera_nn_skel_so \
+    vendor_lib_rfsa_adsp_libdspCV_skel_so \
+    vendor_lib_rfsa_adsp_libfastcvadsp_so \
+    vendor_lib_rfsa_adsp_libfastcvdsp_skel_so \
+    vendor_lib_rfsa_adsp_libscveObjectSegmentation_skel_so \
+    vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libsnpe_dsp_v65_domains_v2_skel_so \
+    vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
+    vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
     libmmosal \
     libmmparser_lite \
     libmmrtpdecoder \
