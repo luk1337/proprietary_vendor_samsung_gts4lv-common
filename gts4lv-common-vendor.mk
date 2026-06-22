@@ -9,7 +9,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/samsung/gts4lv-common/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/samsung/gts4lv-common/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
-    vendor/samsung/gts4lv-common/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
+    vendor/samsung/gts4lv-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/samsung/gts4lv-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/configstore/vpp.configstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/configstore/vpp.configstore.xml \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
@@ -435,26 +435,25 @@ PRODUCT_PACKAGES += \
     libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
+    libwfdavenhancements \
     libwfdclient \
     libwfdcommonutils \
     libwfdconfigutils \
     libwfddisplayconfig \
     libwfdmminterface \
     libwfdmmsink \
+    libwfdmmsrc_system \
+    libwfdnative \
     libwfdrtsp \
+    libwfdservice \
     libwfdsinksm \
     libwfduibcinterface \
     libwfduibcsink \
     libwfduibcsinkinterface \
     libwfduibcsrc \
     libwfduibcsrcinterface \
-    com.qualcomm.qti.wifidisplayhal@1.0 \
-    libwfdavenhancements \
-    libwfdmmsrc_system \
-    libwfdservice \
     vendor.qti.hardware.wifidisplaysession@1.0 \
-    com.qualcomm.qti.ant@1.0 \
-    libwfdnative \
+    vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk \
     HotwordEnrollmentOKGoogleEx2TL3210 \
     HotwordEnrollmentXGoogleEx2TL3210 \
     TimeService \
