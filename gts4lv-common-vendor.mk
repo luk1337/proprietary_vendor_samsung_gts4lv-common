@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
+    vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-sscrpc-service.rc \
@@ -36,6 +37,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc \
@@ -56,6 +58,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
     vendor/samsung/gts4lv-common/proprietary/vendor/etc/seccomp_policy/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
@@ -130,6 +133,7 @@ PRODUCT_PACKAGES += \
     libacdbloader \
     libacdbrtac \
     libadiertac \
+    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -148,8 +152,6 @@ PRODUCT_PACKAGES += \
     libdataitems \
     libdiag \
     libdiagjni \
-    libdisp-aba \
-    libdisplayqos \
     libdrmfs \
     libdrmtime \
     libdsutils \
@@ -168,7 +170,6 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     libgpudataproducer \
     libgsl \
-    libhdr_tm \
     libidl \
     libizat_client_api \
     libizat_core \
@@ -193,7 +194,6 @@ PRODUCT_PACKAGES += \
     libperfioctl \
     libperipheral_client \
     libprofileparamstorage \
-    libpvr \
     libqcbor \
     libqcc_file_agent \
     libqcmaputils \
@@ -209,7 +209,6 @@ PRODUCT_PACKAGES += \
     libqmi_encdec \
     libqmiservices \
     libqrtr \
-    libqseed3 \
     libqsocket \
     libqti-perfd-client \
     libqti-perfd \
@@ -223,11 +222,6 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation_stub \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libsdedrm \
-    libsdm-color \
-    libsdm-diag \
-    libsdm-disp-vndapis \
-    libsdmextension \
     libsdsprpc \
     libsecaudiocoreutils \
     libsecnativefeature \
@@ -250,7 +244,6 @@ PRODUCT_PACKAGES += \
     libsysmon_cdsp_skel \
     libthermalclient \
     libtime_genoff \
-    libtinyxml2_1 \
     libvppclient \
     libvpphvx \
     libvpplibrary \
@@ -263,13 +256,6 @@ PRODUCT_PACKAGES += \
     libqcvirt \
     libshoebox \
     libswdap \
-    vendor.display.color@1.0 \
-    vendor.display.color@1.1 \
-    vendor.display.color@1.2 \
-    vendor.display.color@1.3 \
-    vendor.display.color@1.4 \
-    vendor.display.color@1.5 \
-    vendor.display.postproc@1.0 \
     vendor.qti.gnss@1.0 \
     vendor.qti.gnss@1.1 \
     vendor.qti.gnss@1.2 \
@@ -287,6 +273,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
+    vendor.qti.qspmhal@1.0 \
     vendor.samsung.hardware.gnss@2.0 \
     com.samsung.sensor.s5k3m5 \
     com.samsung.sensor.s5k4ha \
@@ -393,6 +380,11 @@ PRODUCT_PACKAGES += \
     libSNPE \
     libbtnv \
     libc++_shared \
+    libdisp-aba \
+    libdisplayqos \
+    libdisplayskuutils \
+    libdpps \
+    libhdr_tm \
     libhypervintf \
     libkeymaster_helper \
     libkeymasterdeviceutils \
@@ -402,12 +394,27 @@ PRODUCT_PACKAGES += \
     libmeters \
     libnanopb \
     libqdma_file_agent \
+    libqseed3 \
     libreffeature \
+    libsdm-color \
+    libsdm-colormgr-algo \
+    libsdm-diag \
+    libsdm-disp-vndapis \
+    libsdmextension \
     libskeymaster4device \
     libsnpe_dsp_domains_v2 \
     libsnpe_wrapper \
+    libtinyxml2_1 \
+    vendor.display.color@1.0 \
+    vendor.display.color@1.1 \
+    vendor.display.color@1.2 \
+    vendor.display.color@1.3 \
+    vendor.display.color@1.4 \
+    vendor.display.color@1.5 \
+    vendor.display.postproc@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.fm@1.0 \
+    vendor.qti.qspmhal@1.0-impl \
     vendor.samsung.hardware.bluetooth@2.0 \
     vendor.samsung.hardware.hyper-V2-ndk_platform \
     vendor.samsung.hardware.thermal@1.0 \
@@ -473,17 +480,18 @@ PRODUCT_PACKAGES += \
     irsc_util \
     loc_launcher \
     lowi-server \
-    mm-pp-dpps \
     pd-mapper \
     pm-proxy \
     pm-service \
     ppd \
+    qdcmss \
     qseecomd \
     rmt_storage \
     sensors.qti \
     tftp_server \
     thermal-engine \
     time_daemon \
+    vendor.qti.qspmhal@1.0-service \
     vppservice \
     wfdhdcphalservice \
     wifidisplayhalservice \
