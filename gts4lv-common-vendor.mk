@@ -107,7 +107,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gts4lv-common/proprietary/vendor/lib/camera/titan17x_usecases.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/titan17x_usecases.bin
 
 PRODUCT_PACKAGES += \
-    libantradio \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -372,10 +371,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
-    com.qualcomm.qti.ant@1.0_vendor \
     android.hardware.bluetooth@1.0-impl-qti \
-    com.qualcomm.qti.ant@1.0-impl \
+    com.dsi.ant@1.0-impl \
     gatekeeper.mdfpp \
+    vendor.qti.hardware.bluetooth_sar@1.1-impl \
+    vendor.qti.hardware.btconfigstore@1.0-impl \
+    vendor.qti.hardware.btconfigstore@2.0-impl \
     libSNPE \
     libbtnv \
     libc++_shared \
@@ -404,6 +405,7 @@ PRODUCT_PACKAGES += \
     libskeymaster4device \
     libsnpe_dsp_domains_v2 \
     libsnpe_wrapper \
+    libsoc_helper \
     libtinyxml2_1 \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
@@ -413,9 +415,9 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
+    vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.fm@1.0 \
     vendor.qti.qspmhal@1.0-impl \
-    vendor.samsung.hardware.bluetooth@2.0 \
     vendor.samsung.hardware.hyper-V2-ndk_platform \
     vendor.samsung.hardware.thermal@1.0 \
     vendor_lib_rfsa_adsp_libVC1Dec_so \
