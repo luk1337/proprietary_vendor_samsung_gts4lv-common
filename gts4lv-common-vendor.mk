@@ -208,7 +208,6 @@ PRODUCT_PACKAGES += \
     libqmi_csi \
     libqmi_encdec \
     libqmiservices \
-    libqrtr \
     libqsocket \
     libqti-perfd-client \
     libqti-perfd \
@@ -394,6 +393,7 @@ PRODUCT_PACKAGES += \
     libmeters \
     libnanopb \
     libqdma_file_agent \
+    libqrtr \
     libqseed3 \
     libreffeature \
     libsdm-color \
@@ -485,6 +485,9 @@ PRODUCT_PACKAGES += \
     pm-service \
     ppd \
     qdcmss \
+    qrtr-cfg \
+    qrtr-lookup \
+    qrtr-ns \
     qseecomd \
     rmt_storage \
     sensors.qti \
