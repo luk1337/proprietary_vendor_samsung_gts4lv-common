@@ -8163,7 +8163,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.qcom",
+    name: "audio.primary.sdm710",
     owner: "samsung",
     strip: {
         none: true,
@@ -8171,7 +8171,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/audio.primary.qcom.so",
+                "proprietary/vendor/lib/hw/audio.primary.sdm710.so",
             ],
             shared_libs: [
                 "libbase",

@@ -303,7 +303,7 @@ PRODUCT_PACKAGES += \
     com.wrapper.stats.pdlib \
     com.qti.node.eisv2 \
     com.qti.node.eisv3 \
-    audio.primary.qcom \
+    audio.primary.sdm710 \
     camera.qcom \
     com.samsung.chi.override \
     sound_trigger.primary.sdm710 \
