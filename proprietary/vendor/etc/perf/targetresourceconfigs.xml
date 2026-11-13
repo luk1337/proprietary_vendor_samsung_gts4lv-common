@@ -46,9 +46,13 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xC" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
 
-        <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/class/devfreq/soc:qcom,memlat-cpu6/mem_latency/ratio_ceil"/> <!-- l2_memlat_ratio_ceil_1 -->
-        <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/class/devfreq/soc:qcom,memlat-cpu6/mem_latency/stall_floor"/> <!-- memlat_stall_floor -->
-        <Config MajorValue="0xD" MinorValue="0x6" Node="/sys/class/devfreq/soc:qcom,memlat-cpu6/min_freq"/> <!-- memlat_min_freq -->
+        <Config MajorValue="0xD" MinorValue="0x0" Node="/sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu%d-cpu-l3-lat/min_freq"/>
+        <Config MajorValue="0xD" MinorValue="0x1" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil"/>
+        <Config MajorValue="0xD" MinorValue="0x3" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/stall_floor"/>
+        <Config MajorValue="0xD" MinorValue="0x5" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/min_freq"/>
+        <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/mem_latency/ratio_ceil"/> <!-- l2_memlat_ratio_ceil_1 -->
+        <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/mem_latency/stall_floor"/> <!-- memlat_stall_floor -->
+        <Config MajorValue="0xD" MinorValue="0x6" Node="/sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/min_freq"/> <!-- memlat_min_freq -->
 
     </PerfResources>
 </ResourceConfigs>
